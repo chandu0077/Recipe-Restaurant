@@ -41,7 +41,6 @@ export default function HomePage() {
           },
         },
       );
-      console.log("recipe data", response.data);
       setRecipesData(response.data);
     } catch (error) {
       console.log(error);

@@ -41,7 +41,6 @@ export default function Homepage() {
       .then(function (response: any) {
         localStorage.setItem("token", response.data.accessToken);
         localStorage.setItem("refreshToken", response.data.refreshToken);
-        console.log("%%%%%%", response.data);
         if (response.data.user.isAdmin) {
           router.push("/admin");
         } else if (response.data.user.cuisines.length > 0) {

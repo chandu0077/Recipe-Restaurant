@@ -1,7 +1,6 @@
 const Cuisine = require("../model/Cuisine");
 
 const getCuisines = async (req, res) => {
-  console.log("request get", req.body);
   try {
     const cuisine = await Cuisine.find();
     res.status(200).json(cuisine);

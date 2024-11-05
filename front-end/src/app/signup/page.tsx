@@ -50,8 +50,6 @@ export default function Homepage() {
       });
   };
 
-  console.log('getValues("isAdmin")', getValues("isAdmin"));
-
   return (
     <Flex
       w="100%"

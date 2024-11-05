@@ -58,7 +58,6 @@ export default function HomePage() {
         },
       })
       .then(function (response) {
-        console.log(",,,,,,", response.data);
         setUserData(response.data);
       })
       .catch((err) => {
@@ -96,7 +95,6 @@ export default function HomePage() {
         },
       })
       .then(function (response) {
-        console.log("/////////", response.data);
         setUserFavouriteRecipes(response.data);
       })
       .catch((err) => {
@@ -126,7 +124,6 @@ export default function HomePage() {
 
   const createALike = (recipeId: string) => {
     const accessToken = localStorage.getItem("token");
-    console.log("/////", accessToken);
     const data = {};
     axios
       .post(
@@ -149,7 +146,6 @@ export default function HomePage() {
 
   const deleteALike = (recipeId: string) => {
     const accessToken = localStorage.getItem("token");
-    console.log("/////", accessToken);
     const data = {};
     axios
       .delete(

@@ -44,7 +44,6 @@ const Register = async (req, res) => {
 };
 
 const Login = async (req, res) => {
-  console.log("login", req.body);
   const { email, password } = req.body.data;
   const { error } = loginValidation(req.body.data);
 
@@ -76,7 +75,6 @@ const RefreshToken = async (req, res) => {
 };
 
 const AddCuisine = async (req, res) => {
-  console.log("request", req.body);
   try {
     const updatedUser = await User.findByIdAndUpdate(req.user._id, {
       cuisines: req.body,
@@ -91,7 +89,6 @@ const AddCuisine = async (req, res) => {
 };
 
 const getUser = async (req, res) => {
-  console.log("request....", req.body);
   try {
     const user = await User.findById(req.user._id);
     res.status(200).json(user);
@@ -106,8 +103,6 @@ const getUserFavouriteCuisine = async (req, res) => {
     const userFavCuisines = await Cuisine.find({
       _id: { $in: user.cuisines },
     });
-    console.log("userId", user);
-    console.log("userFavCuisines", userFavCuisines);
     res.status(200).json(userFavCuisines);
   } catch (error) {
     res.status(400).json({ message: error });

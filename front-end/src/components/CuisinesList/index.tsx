@@ -21,7 +21,6 @@ const CuisinesList = () => {
         },
       })
       .then(function (response) {
-        console.log("////", response.data);
         setAllCuisines(response.data);
       })
       .catch((err) => {
@@ -42,7 +41,6 @@ const CuisinesList = () => {
   };
 
   const addCuisinesToUser = () => {
-    console.log("selectedCuisines", selectedCuisines);
     // API call to api/user/add-cuisine post the selectedCuisines array
     // after success, take user to /reciperoute on frontned.
     const accessToken = localStorage.getItem("token");

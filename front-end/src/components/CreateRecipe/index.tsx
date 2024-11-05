@@ -125,7 +125,6 @@ const CreateRecipe: React.FC<Props> = ({
           },
         },
       );
-      console.log("////", response.data);
       setAllCuisines(response.data);
     } catch (error) {
       console.error(error);

@@ -41,9 +41,10 @@ export default function Homepage() {
       .then(function (response: any) {
         localStorage.setItem("token", response.data.accessToken);
         localStorage.setItem("refreshToken", response.data.refreshToken);
-        if (response.data.user.isAdmin) {
-          router.push("/admin");
-        } else if (response.data.user.cuisines.length > 0) {
+        // if (response.data.user.isAdmin) {
+        router.push("/admin");
+        // }  
+        if (response.data.user.cuisines.length > 0) {
           router.push("/recipe-route");
         } else {
           router.push("/user");

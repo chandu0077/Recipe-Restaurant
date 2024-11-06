@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const Cuisine = require("../model/Cuisine");
 const Recipe = require("../model/Recipe");
 const Likes = require("../model/Likes");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
 
